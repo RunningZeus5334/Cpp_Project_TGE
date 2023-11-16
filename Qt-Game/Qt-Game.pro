@@ -10,11 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     bullet.cpp \
+    enemy.cpp \
     main.cpp \
     rectangle.cpp
 
 HEADERS += \
     bullet.h \
+    enemy.h \
     rectangle.h
 
 # Default rules for deployment.

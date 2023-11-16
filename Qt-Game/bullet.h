@@ -14,3 +14,6 @@ public slots:
 };
 
 #endif // BULLET_H
+
+//soorten bullets maken, gekleurde maybe of meer of minder
+//dit mag een base class zijn voor mijn andere bullets.
