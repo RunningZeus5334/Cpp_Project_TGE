@@ -11,19 +11,13 @@ CONFIG += c++17
 SOURCES += \
     bullet.cpp \
     enemy.cpp \
-    game.cpp \
-    health.cpp \
     main.cpp \
-    rectangle.cpp \
-    score.cpp
+    rectangle.cpp
 
 HEADERS += \
     bullet.h \
     enemy.h \
-    game.h \
-    health.h \
-    rectangle.h \
-    score.h
+    rectangle.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
