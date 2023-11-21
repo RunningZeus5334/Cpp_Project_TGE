@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/Sounds">
+        <file>Action 8-bit Chiptune Background Music for Games Tunnels.mp3</file>
+        <file>Pew Sound Effect.mp3</file>
+    </qresource>
+</RCC>

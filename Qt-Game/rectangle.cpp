@@ -3,6 +3,14 @@
 #include <QKeyEvent>
 #include <bullet.h>
 #include "enemy.h"
+
+Rectangle::Rectangle(QGraphicsItem * parent) : QGraphicsRectItem(parent){
+    pew = new QMediaPlayer();
+    pewspeaker = new QAudioOutput();
+    pew->setAudioOutput(pewspeaker);
+    pew->setSource(QUrl("qrc:/Sounds/Pew Sound Effect.mp3"));
+
+}
 void Rectangle::keyPressEvent(QKeyEvent *event)
 {
     if (event->key()== Qt::Key_Left){
@@ -18,6 +26,9 @@ void Rectangle::keyPressEvent(QKeyEvent *event)
         Bullet * kogel = new Bullet();
         kogel->setPos(x(),y());
         scene()->addItem(kogel);
+
+        // play pew
+        pew->play();
     }
 }
 
@@ -27,3 +38,4 @@ void Rectangle::spawn()
     Enemy * enemy1 = new Enemy();
     scene()->addItem(enemy1);
 }
+
