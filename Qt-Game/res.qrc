@@ -3,4 +3,11 @@
         <file>Action 8-bit Chiptune Background Music for Games Tunnels.mp3</file>
         <file>Pew Sound Effect.mp3</file>
     </qresource>
+    <qresource prefix="/Textures">
+        <file>Bullet.png</file>
+        <file>Invader.png</file>
+        <file>Spaceship.png</file>
+        <file>Backgroud.jpeg</file>
+        <file>Backgroud.png</file>
+    </qresource>
 </RCC>

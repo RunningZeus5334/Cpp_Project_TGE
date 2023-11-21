@@ -8,12 +8,12 @@
 //#include <QDebug>
 extern Game * game;
 
-Enemy::Enemy()
+Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
 {
     //set random pos for enemy on X axis
     setPos(rand()%700,0);
 
-    setRect(0,0,100,100);
+    setPixmap(QPixmap(":/Textures/Invader.png"));
 
     QTimer * timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -25,7 +25,7 @@ void Enemy::move()
 {
    // enemy wil go down
     setPos(x(),y()+5);
-    if(pos().y()- rect().height()> 580)
+    if(pos().y()> 580)
     {
         scene()->removeItem(this);
         delete this;

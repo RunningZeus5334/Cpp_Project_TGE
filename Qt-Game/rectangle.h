@@ -3,11 +3,11 @@
 
 #include <QObject>
 #include <QGraphicsItem>
-#include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <QMediaPlayer>
 #include <QAudioOutput>
 
-class Rectangle: public QObject, public QGraphicsRectItem
+class Rectangle: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:

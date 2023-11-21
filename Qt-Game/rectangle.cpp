@@ -4,11 +4,14 @@
 #include <bullet.h>
 #include "enemy.h"
 
-Rectangle::Rectangle(QGraphicsItem * parent) : QGraphicsRectItem(parent){
+Rectangle::Rectangle(QGraphicsItem * parent) : QGraphicsPixmapItem(parent)
+{
     pew = new QMediaPlayer();
     pewspeaker = new QAudioOutput();
     pew->setAudioOutput(pewspeaker);
     pew->setSource(QUrl("qrc:/Sounds/Pew Sound Effect.mp3"));
+
+    setPixmap(QPixmap(":/Textures/Spaceship.png"));
 
 }
 void Rectangle::keyPressEvent(QKeyEvent *event)
