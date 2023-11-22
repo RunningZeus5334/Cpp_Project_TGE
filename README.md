@@ -1,2 +1,2 @@
 # Cpp_Project_TGE
-Hi in This branch i will be making a game in Qt to learn about engine programming and game programming. 
+The Qt-game is now in BETA release. download all files and u can play my amazing game :D
