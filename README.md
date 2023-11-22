@@ -1,2 +1,2 @@
 # Cpp_Project_TGE
-Hi im making a game engine as a project for C++
+Hi in This branch i will be making a game in Qt to learn about engine programming and game programming. 
