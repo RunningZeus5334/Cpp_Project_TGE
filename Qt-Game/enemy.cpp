@@ -15,7 +15,7 @@ Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
 
     setPixmap(QPixmap(":/Textures/Invader.png"));
 
-    QTimer * timer = new QTimer();
+    QTimer * timer = new QTimer(); //to do: put as member and delete in destructor
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
 
     timer->start(50);

@@ -51,7 +51,7 @@ Game::Game(QWidget *parent){
     //had to do some diggen cuz api changed for mediaplayer and needed other functions to call it.
     music->setSource(QUrl("qrc:Sounds/Action 8-bit Chiptune Background Music for Games Tunnels.mp3"));
     Speakers->setVolume(50);
-    music->loops();
+    music->setLoops(QMediaPlayer::Infinite);
     music->play();
 
 
