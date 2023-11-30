@@ -33,7 +33,7 @@ void Bullet::move()
            scene()->removeItem(this);
 
            delete colliding_items[i];
-           delete this;  //fix with delete later
+           this->deleteLater();  //fix with delete later
 
            return;
        }

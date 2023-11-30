@@ -14,6 +14,7 @@ SOURCES += \
     bullet.cpp \
     enemy.cpp \
     game.cpp \
+    game_over.cpp \
     health.cpp \
     main.cpp \
     rectangle.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     bullet.h \
     enemy.h \
     game.h \
+    game_over.h \
     health.h \
     rectangle.h \
     score.h

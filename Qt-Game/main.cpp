@@ -19,5 +19,3 @@ int main(int argc, char *argv[]){
 
 
 
-// should i continue this game or make a new one?
-// or should i start the game enigne?
