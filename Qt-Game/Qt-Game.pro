@@ -1,6 +1,6 @@
 QT       += core gui
 QT       += multimedia
-
+QT       += qml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,7 +18,8 @@ SOURCES += \
     health.cpp \
     main.cpp \
     rectangle.cpp \
-    score.cpp
+    score.cpp \
+    static_game.cpp
 
 HEADERS += \
     bullet.h \
@@ -27,7 +28,8 @@ HEADERS += \
     game_over.h \
     health.h \
     rectangle.h \
-    score.h
+    score.h \
+    static_game.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
