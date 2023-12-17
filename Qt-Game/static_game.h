@@ -1,28 +1,35 @@
 #ifndef STATIC_GAME_H
 #define STATIC_GAME_H
 
-#include <QQmlEngine>
-#include "game.h"
+#include <QGraphicsView>
+#include <QWidget>
+#include <QGraphicsScene>
+//#include "rectangle.h"
+//#include "score.h"
+//#include "health.h"
+//#include "Enemy.h"
+#include <QAudioOutput>
+#include <QMediaPlayer>
 
-class Static_game : public QObject
+class Static_game
 {
-    Q_OBJECT
-    QML_ELEMENT
-    QML_SINGLETON
+private:
+    Static_game() {}
+    Static_game(const Static_game&) {}
+    Static_game&  operator = (const Static_game&) {
 
-public:
-
-    static Static_game *create(QQmlEngine *qmlEngine, QJSEngine *jsEngine)
-    {
-        Static_game *result = nullptr;
-        // Create the object using some custom constructor or factory.
-        // The QML engine will assume ownership and delete it, eventually.
-        return result;
+        return *this;
     }
 
-    // members, Q_INVOKABLE functions, et
-    // do i want my other classes here??
+    // In C++11, copy constructor and assignment operator could be deleted (= delete)
 
+public:
+    static Static_game & instance() {
+        static Static_game * _instance = new Static_game();
+
+        return *_instance;
+    }
+     void Const_game(Static_game){};
 };
 
 #endif // STATIC_GAME_H

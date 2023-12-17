@@ -1,3 +1,5 @@
 #include "static_game.h"
 
-// do i need this deconstructor?
+Static_game::instance(){
+
+}
