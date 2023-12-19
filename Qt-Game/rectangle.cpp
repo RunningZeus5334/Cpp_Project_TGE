@@ -27,7 +27,7 @@ void Rectangle::keyPressEvent(QKeyEvent *event)
     else if(event->key()== Qt::Key_Space){
         // create a bullter
         Bullet * kogel = new Bullet();
-        kogel->setPos(x(),y());
+        kogel->setPos(x()+45,y()-30);
         scene()->addItem(kogel);
 
         // play pew

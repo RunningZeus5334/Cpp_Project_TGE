@@ -10,6 +10,18 @@
 
 Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
 {
+    // speed changer for enemys
+    int spawn_speed = 50;
+    if( Static_game::instance().getGame()->score->getScore() >= 40){
+        spawn_speed = 10;
+    }
+    else if( Static_game::instance().getGame()->score->getScore() >= 20){
+        spawn_speed = 30;
+    }
+    else if( Static_game::instance().getGame()->score->getScore() >= 10){
+        spawn_speed = 40;
+    }
+
     //set random pos for enemy on X axis
     setPos(rand()%700,0);
 
@@ -18,7 +30,7 @@ Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
     QTimer * timer = new QTimer(); //to do: put as member and delete in destructor
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
 
-    timer->start(50);
+    timer->start(spawn_speed);
 }
 
 void Enemy::move()

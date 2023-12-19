@@ -43,7 +43,7 @@ void Bullet::move()
    if(pos().y() < 0)
     {
        scene()->removeItem(this);
-       delete this;
+       this->deleteLater();
 
        // Uncheck Qdebug if u want to see that bullets get deleted
        //qDebug("Deleted Bullet");

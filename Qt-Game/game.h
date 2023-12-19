@@ -7,7 +7,7 @@
 #include "rectangle.h"
 #include "score.h"
 #include "health.h"
-#include "Enemy.h"
+#include "game_over.h"
 #include <QAudioOutput>
 #include <QMediaPlayer>
 
@@ -21,7 +21,7 @@ public:
     Health * health;
     QMediaPlayer * music;
     QAudioOutput * Speakers;
-
+    Game_over * Dead;
 };
 
 #endif // GAME_H

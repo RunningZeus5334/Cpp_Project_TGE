@@ -3,5 +3,6 @@
 
 void Game_over::End_game()
 {
-Static_game::instance().getGame()->close();
+    Static_game::instance().getGame()->close();
 }
+
