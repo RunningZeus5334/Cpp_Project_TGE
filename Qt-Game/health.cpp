@@ -1,8 +1,8 @@
 #include "health.h"
 
 #include <QFont>
-#include "game.h"
-extern Game * game;
+#include "static_game.h"
+
 Health::Health(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
     health = 5;
@@ -20,7 +20,7 @@ void Health::decrease()
     setPlainText("Health: " + QString::number(health));
     if(health <= 0)
     {
-        game->close();
+        Static_game::instance().getGame()->close();
         // game closes when u lose. TODO:: gameover screen
     }
 }

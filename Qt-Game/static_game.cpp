@@ -1,5 +1,10 @@
 #include "static_game.h"
 
-Static_game::instance(){
 
+
+
+
+Game *Static_game::getGame() const
+{
+    return game;
 }

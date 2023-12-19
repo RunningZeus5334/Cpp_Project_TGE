@@ -3,11 +3,10 @@
 #include <QGraphicsScene>
 #include <qlist.h>
 #include "enemy.h"
-#include "game.h"
+#include "static_game.h"
 //#include "score.h"
 // Uncheck Qdebug if u want to see that bullets get deleted
 //#include <Qdebug>
-extern Game * game;
 
 Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
 {
@@ -28,7 +27,7 @@ void Bullet::move()
    {
        if(typeid(*(colliding_items[i]))==typeid(Enemy))
        {
-           game->score->inscrease();
+           Static_game::instance().getGame()->score->inscrease();
            scene()->removeItem(colliding_items[i]);
            scene()->removeItem(this);
 

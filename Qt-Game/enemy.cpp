@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include <QGraphicsScene>
 #include <QList>
-#include "game.h"
+#include "static_game.h"
 //Uncheck Qdebug to see that enemys get deleted
 //#include <QDebug>
-extern Game * game;
+
 
 Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
 {
@@ -29,7 +29,7 @@ void Enemy::move()
     {
         scene()->removeItem(this);
         delete this;
-        game->health->decrease();
+        Static_game::instance().getGame()->health->decrease();
         //Uncheck Qdebug to see that enemys get deleted
         //qDebug("Deleted enemy");
 

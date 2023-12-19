@@ -1,14 +1,14 @@
 #include <QApplication>
-#include "Game.h"
+#include "static_game.h"
 
 
-Game * game; // need to make this static
+ // need to make this static
 
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
 
-    game = new Game();
-    game->show();
+    Static_game::instance().getGame()->show();
+
 
     return a.exec();
 }
