@@ -3,6 +3,7 @@
 #include <QKeyEvent>
 #include <bullet.h>
 #include "enemy.h"
+#include "static_game.h"
 
 Rectangle::Rectangle(QGraphicsItem * parent) : QGraphicsPixmapItem(parent)
 {
@@ -32,6 +33,9 @@ void Rectangle::keyPressEvent(QKeyEvent *event)
 
         // play pew
         pew->play();
+    }
+    else if(event->key()== Qt::Key_Escape){
+        Static_game::instance().getGame()->Dead->End_game();
     }
 }
 
