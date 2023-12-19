@@ -5,7 +5,7 @@
 class Game_over
 {
 public:
-    Game_over();
+    void End_game();
 };
 
 #endif // GAME_OVER_H

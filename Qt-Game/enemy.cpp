@@ -28,7 +28,7 @@ void Enemy::move()
     if(pos().y()> 580)
     {
         scene()->removeItem(this);
-        delete this;
+        this->deleteLater();
         Static_game::instance().getGame()->health->decrease();
         //Uncheck Qdebug to see that enemys get deleted
         //qDebug("Deleted enemy");

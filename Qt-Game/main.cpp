@@ -2,7 +2,7 @@
 #include "static_game.h"
 
 
- // need to make this static
+
 
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
@@ -12,10 +12,4 @@ int main(int argc, char *argv[]){
 
     return a.exec();
 }
-//singleton design pattern for static game
-// signal slots     --
-// return types
-// object composition
-
-
 
