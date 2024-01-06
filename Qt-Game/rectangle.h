@@ -13,8 +13,10 @@ class Rectangle: public QObject, public QGraphicsPixmapItem
 public:
     Rectangle(QGraphicsItem * parent=0);
     void keyPressEvent(QKeyEvent *event);
+    
 public slots:
     void spawn();
+    
 private:
     QMediaPlayer * pew;
     QAudioOutput * pewspeaker;
