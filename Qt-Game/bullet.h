@@ -5,7 +5,7 @@
 #include <QGraphicsItem>
 #include <QObject>
 
-class Bullet: public QObject, public QGraphicsPixmapItem
+ class Bullet: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:

@@ -4,12 +4,11 @@
 #include <QFont>
 #include <QImage>
 #include <QBrush>
-#include "powerup.h"
 
 Game::Game(QWidget *parent){
     // create the scene
     scene = new QGraphicsScene();
-    scene->setSceneRect(0,0,800,600); // make the scene 800x600 instead of infinity by infinity (default)
+    scene->setSceneRect(0,0,1000,1000); // make the scene 800x600 instead of infinity by infinity (default)
     setBackgroundBrush(QBrush(QImage(":/Textures/Backgroud.png")));
 
 
@@ -18,11 +17,11 @@ Game::Game(QWidget *parent){
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setFixedSize(800,600);
+    setFixedSize(1000,1000);
 
     // create the player
     Player1 = new Rectangle();
-    Player1->setPos(400,500); // TODO generalize to always be in the middle bottom of screen
+    Player1->setPos(400,800);
     // make the player focusable and set it to be the current focus
     Player1->setFlag(QGraphicsItem::ItemIsFocusable);
     Player1->setFocus();
@@ -56,7 +55,7 @@ Game::Game(QWidget *parent){
     //link to music https://www.youtube.com/watch?v=k872Q87ktb0
     //had to do some diggen cuz api changed for mediaplayer and needed other functions to call it.
     music->setSource(QUrl("qrc:Sounds/Action 8-bit Chiptune Background Music for Games Tunnels.mp3"));
-    Speakers->setVolume(50);
+    Speakers->setVolume(10);
     music->setLoops(QMediaPlayer::Infinite);
     music->play();
 
@@ -80,7 +79,7 @@ void Game::increase_power()
 
 void Game::decrease_power()
 {
-    if(getpower() > 0){
+    if(getpower() > 1){
         morepower--;
     }
 }

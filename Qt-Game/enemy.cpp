@@ -23,7 +23,7 @@ Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
     }
 
     //set random pos for enemy on X axis
-    setPos(rand()%700,0);
+    setPos(rand()%900,0);
 
     setPixmap(QPixmap(":/Textures/Invader.png"));
 

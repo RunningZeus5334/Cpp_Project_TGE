@@ -37,7 +37,7 @@ public:
     }
 
     private:
-        int morepower;
+        int morepower = 1;
 
 };
 

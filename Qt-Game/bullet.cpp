@@ -20,6 +20,8 @@ Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
    timer->start(50);
 }
 
+
+
 void Bullet::move()
 {
    //when collision with enemy

@@ -23,6 +23,7 @@ public slots:
     void spawn_powerup();
 
 private:
+    int speed;
     QMediaPlayer * pew;
     QAudioOutput * pewspeaker;
 };

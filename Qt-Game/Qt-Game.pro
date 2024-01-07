@@ -12,6 +12,8 @@ CONFIG += c++17
 
 SOURCES += \
     bullet.cpp \
+    bullet2.cpp \
+    bullet3.cpp \
     enemy.cpp \
     game.cpp \
     game_over.cpp \
@@ -24,6 +26,8 @@ SOURCES += \
 
 HEADERS += \
     bullet.h \
+    bullet2.h \
+    bullet3.h \
     enemy.h \
     game.h \
     game_over.h \
