@@ -4,6 +4,7 @@
 #include <bullet.h>
 #include "enemy.h"
 #include "static_game.h"
+#include "powerup.h"
 
 Rectangle::Rectangle(QGraphicsItem * parent) : QGraphicsPixmapItem(parent)
 {
@@ -44,5 +45,13 @@ void Rectangle::spawn()
     //enemy creation
     Enemy * enemy1 = new Enemy();
     scene()->addItem(enemy1);
+
 }
 
+void Rectangle::spawn_powerup(){
+
+    //spawn powerup
+    Powerup * powerup = new Powerup();
+    scene()->addItem(powerup);
+
+}

@@ -4,7 +4,7 @@
 #include <QFont>
 #include <QImage>
 #include <QBrush>
-
+#include "powerup.h"
 
 Game::Game(QWidget *parent){
     // create the scene
@@ -37,10 +37,16 @@ Game::Game(QWidget *parent){
     scene->addItem(health);
 
 
+
     // spawn enemies
     QTimer * timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),Player1,SLOT(spawn()));
     timer->start(2000);
+
+    // spawn powerup
+    QTimer * timer2 = new QTimer();
+    QObject::connect(timer2,SIGNAL(timeout()),Player1,SLOT(spawn_powerup()));
+    timer2->start(21666);
 
     // play music
     music = new QMediaPlayer();
@@ -56,4 +62,25 @@ Game::Game(QWidget *parent){
 
 
     show();
+}
+
+
+
+
+int Game::getpower()
+{
+    return morepower;
+}
+
+void Game::increase_power()
+{
+    morepower++;
+
+}
+
+void Game::decrease_power()
+{
+    if(getpower() > 0){
+        morepower--;
+    }
 }

@@ -1,7 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <iostream>
 #include <QGraphicsView>
 #include <QWidget>
 #include <QGraphicsScene>
@@ -11,7 +10,6 @@
 #include "game_over.h"
 #include <QAudioOutput>
 #include <QMediaPlayer>
-
 class Game: public QGraphicsView{
 public:
     Game(QWidget * parent=nullptr);  // <- nullpointer used
@@ -24,7 +22,11 @@ public:
     QAudioOutput * Speakers;
     Game_over * Dead;
 
-    ~Game(){
+    int getpower();
+    void increase_power();
+    void decrease_power();
+
+    ~Game(){ //destructor
         delete scene;
         delete Player1;
         delete score;
@@ -32,8 +34,11 @@ public:
         delete music;
         delete Speakers;
         delete Dead;
-        std::cout << "HALLLOO";
     }
+
+    private:
+        int morepower;
+
 };
 
 #endif // GAME_H

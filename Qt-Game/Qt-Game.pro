@@ -17,6 +17,7 @@ SOURCES += \
     game_over.cpp \
     health.cpp \
     main.cpp \
+    powerup.cpp \
     rectangle.cpp \
     score.cpp \
     static_game.cpp
@@ -27,6 +28,7 @@ HEADERS += \
     game.h \
     game_over.h \
     health.h \
+    powerup.h \
     rectangle.h \
     score.h \
     static_game.h

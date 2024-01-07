@@ -19,6 +19,7 @@ void Health::decrease()
 
     health--;
     setPlainText("Health: " + QString::number(health));
+    //Static_game::instance().getGame()->powerup->decrease_power();
     if(health <= 0)
     {
 

@@ -13,8 +13,15 @@ class Rectangle: public QObject, public QGraphicsPixmapItem
 public:
     Rectangle(QGraphicsItem * parent=nullptr);  // <- nullpointer used
     void keyPressEvent(QKeyEvent *event);
+
+    ~Rectangle(){ //destructor
+        delete pew;
+        delete pewspeaker;
+    }
 public slots:
     void spawn();
+    void spawn_powerup();
+
 private:
     QMediaPlayer * pew;
     QAudioOutput * pewspeaker;
