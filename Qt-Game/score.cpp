@@ -1,7 +1,7 @@
 #include "score.h"
 #include <QFont>
 
-Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
+Score::Score() : QGraphicsTextItem()
 {
     score = 0;
 

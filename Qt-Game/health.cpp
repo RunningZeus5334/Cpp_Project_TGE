@@ -4,7 +4,7 @@
 #include "static_game.h"
 
 
-Health::Health(QGraphicsItem *parent) : QGraphicsTextItem(parent)
+Health::Health() : QGraphicsTextItem()
 {
     health = 5;
 

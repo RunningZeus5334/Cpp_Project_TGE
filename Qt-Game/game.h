@@ -14,7 +14,7 @@
 
 class Game: public QGraphicsView{
 public:
-    Game(QWidget * parent=0);
+    Game(QWidget * parent=nullptr);  // <- nullpointer used
 
     QGraphicsScene * scene;
     Rectangle * Player1;
