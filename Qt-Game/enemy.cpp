@@ -37,7 +37,7 @@ void Enemy::move()
 {
    // enemy wil go down
     setPos(x(),y()+5);
-    if(pos().y()> 580)
+    if(pos().y()> 850)
     {
         scene()->removeItem(this);
         this->deleteLater();
