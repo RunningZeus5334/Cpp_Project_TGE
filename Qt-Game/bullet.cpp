@@ -9,21 +9,25 @@
 // Uncheck Qdebug if u want to see that bullets get deleted
 //#include <Qdebug>
 
-Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
+Bullet::Bullet(QGraphicsItem *parent):Base_Object()
 {
     // set image for bullet
     setPixmap(QPixmap(":/Textures/Bullet.png"));
+    if (scene() != nullptr) {  // Ensure the scene is not null
+        scene()->addItem(this);
+    }
 
-   QTimer * timer = new QTimer();
-   connect(timer,SIGNAL(timeout()),this,SLOT(move()));
+    QTimer * timer = new QTimer();
+    connect(timer,SIGNAL(timeout()),this,SLOT(Base_Object->move()));
 
-   timer->start(50);
+    timer->start(50);
 }
 
 
 
 void Bullet::move()
 {
+    setPos(x() + 45, y() - 30);
    //when collision with enemy
    QList<QGraphicsItem *> colliding_items = collidingItems();
    for(int i = 0, n = colliding_items.size(); i < n ; i++ )

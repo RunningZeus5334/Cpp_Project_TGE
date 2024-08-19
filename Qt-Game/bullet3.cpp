@@ -13,7 +13,9 @@ Bullet3::Bullet3(QGraphicsItem *parent)
 {
     // set image for bullet
     setPixmap(QPixmap(":/Textures/among.png"));
-
+    if (scene() != nullptr) {  // Ensure the scene is not null
+        scene()->addItem(this);
+    }
     QTimer * timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
 
@@ -24,6 +26,7 @@ Bullet3::Bullet3(QGraphicsItem *parent)
 
 void Bullet3::move()
 {
+    setPos(x() + 45, y() - 30);
     //when collision with enemy
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for(int i = 0, n = colliding_items.size(); i < n ; i++ )

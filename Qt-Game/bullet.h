@@ -1,15 +1,17 @@
 #ifndef BULLET_H
 #define BULLET_H
 
-#include <QGraphicsPixmapItem>
-#include <QGraphicsItem>
-#include <QObject>
 
- class Bullet: public QObject, public QGraphicsPixmapItem
+#include <QGraphicsItem>
+#include "base_object.h"
+
+
+ class Bullet: public Base_Object
 {
     Q_OBJECT
 public:
     Bullet(QGraphicsItem * parent=nullptr); // <- nullpointer used
+
 public slots:
     void move();
 };

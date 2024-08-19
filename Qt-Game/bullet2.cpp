@@ -13,7 +13,9 @@ Bullet2::Bullet2(QGraphicsItem *parent)
 {
     // set image for bullet
     setPixmap(QPixmap(":/Textures/green-laser.png"));
-
+    if (scene() != nullptr) {  // Ensure the scene is not null
+        scene()->addItem(this);
+    }
     QTimer * timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
 
@@ -24,6 +26,7 @@ Bullet2::Bullet2(QGraphicsItem *parent)
 
 void Bullet2::move()
 {
+    setPos(x() + 45, y() - 30);
     //when collision with enemy
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for(int i = 0, n = colliding_items.size(); i < n ; i++ )

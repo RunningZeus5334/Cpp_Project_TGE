@@ -34,18 +34,21 @@ void Rectangle::keyPressEvent(QKeyEvent *event)
         // make different bullets spawn here
         if(Static_game::instance().getGame()->getpower() > 4){
             Bullet3 * kogel = new Bullet3();
-            kogel->setPos(x()+45,y()-30);
-            scene()->addItem(kogel);
+            delete kogel;
+            //kogel->setPos(x()+45,y()-30);
+            //scene()->addItem(kogel);
         }
         else if(Static_game::instance().getGame()->getpower() > 2){
             Bullet2 * kogel = new Bullet2();
-            kogel->setPos(x()+45,y()-30);
-            scene()->addItem(kogel);
+            delete kogel;
+            //kogel->setPos(x()+45,y()-30);
+            //scene()->addItem(kogel);
         }
         else{
             Bullet * kogel = new Bullet();
-            kogel->setPos(x()+45,y()-30);
-            scene()->addItem(kogel);
+            delete kogel;
+            //kogel->setPos(x()+45,y()-30);
+            //cene()->addItem(kogel);
         }
         // play pew
         pew->play();
